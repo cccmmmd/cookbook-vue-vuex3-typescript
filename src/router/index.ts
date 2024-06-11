@@ -52,9 +52,9 @@ const routes = [
 		],
 	},
 	{
-		path: "/guest",
-		component: GuestLayout,
-	},
+		path: '/:pathMatch(.*)*',
+		redirect: "/",
+	}
 ];
 
 const router = createRouter({
