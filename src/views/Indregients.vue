@@ -37,11 +37,7 @@
 <script setup lang="ts">
 import { computed, onMounted, ref } from 'vue';
 import store from '../store';
-
-interface Ingredient {
-  idIngredient: number;
-  strIngredient: string;
-}
+import type {Ingredient} from '../types';
 
 const keyword = ref('');
 

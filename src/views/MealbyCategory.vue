@@ -12,18 +12,16 @@
 	</div>
 </template>
 <script setup lang="ts">
-import { computed, onMounted, ref } from "vue";
+import { computed, onMounted } from "vue";
 import store from "../store";
 import { useRoute, useRouter } from "vue-router";
 import Mealitem from "../components/Mealitem.vue";
+import type {Meal} from '../types';
 
-interface RouteParams {
-  category: string;
-}
 
-const route = useRoute<RouteParams>(); 
+const route = useRoute(); 
 const router = useRouter();
-const meals = computed(() => store.state.mealsbyCategory);
+const meals = computed<Meal[]>(() => store.state.mealsbyCategory);
 
 
 onMounted(async () => {

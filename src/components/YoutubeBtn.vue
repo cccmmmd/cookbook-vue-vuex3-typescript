@@ -8,7 +8,8 @@
 	</a>
 </template>
 <script setup lang="ts">
-const props = defineProps({
+const props = defineProps<{
 	href: String,
-});
+}>();
+
 </script>

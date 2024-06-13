@@ -16,11 +16,12 @@ import { computed, onMounted } from "vue";
 import store from "../store";
 import { useRoute, useRouter } from "vue-router";
 import Mealitem from "../components/Mealitem.vue";
+import type {Meal} from '../types';
 
 
 const route = useRoute();
 const router = useRouter();
-const meals = computed(() => store.state.mealsbyIngredient);
+const meals = computed<Meal[]>(() => store.state.mealsbyIngredient);
 
 
 onMounted(() => {

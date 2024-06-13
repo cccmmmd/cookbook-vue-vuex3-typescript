@@ -32,14 +32,12 @@ import { computed, onMounted, watch } from "vue";
 import { useRoute } from "vue-router";
 import store from "../store";
 import Mealitem from "../components/Mealitem.vue";
+import type {Recipe} from '../types';
 
-interface RouteParams {
-  letter?: string; 
-}
 
-const route = useRoute<RouteParams>();
+const route = useRoute();
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
-const meals = computed(() => store.state.mealsbyLetter);
+const meals = computed<Recipe[]>(() => store.state.mealsbyLetter);
 
 const mealsapi = () => {
 	if (route.params.letter) {

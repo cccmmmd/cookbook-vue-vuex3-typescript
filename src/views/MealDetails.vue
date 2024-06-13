@@ -68,23 +68,12 @@ import { onMounted, ref } from "vue";
 import { useRoute, useRouter } from "vue-router";
 import axiosClient from "../axiosClient";
 import YoutubeButton from "../components/YoutubeBtn.vue";
+import type {Recipe} from '../types';
 
-interface Meal {
-  strMeal: string;
-  strMealThumb: string;
-  strCategory: string;
-  strArea: string;
-  strTags: string;
-  strInstructions: string;
-  strYoutube: string;
-  strSource: string;
-  [`strIngredient${number}`]: string; 
-  [`strMeasure${number}`]: string;
-}
 
 const router = useRouter();
 const route = useRoute();
-const meal = ref<Meal>({});
+const meal = ref<Recipe>({});
 
 onMounted(() => {
 	try {

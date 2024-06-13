@@ -23,17 +23,18 @@ import { computed, ref, onMounted } from "vue";
 import { useRoute } from "vue-router";
 import store from "../store";
 import Mealitem from "../components/Mealitem.vue";
+import type {Recipe} from '../types';
 
 const route = useRoute();
 const keyword = ref<string>("");
-const meals = computed(() => store.state.searchMeals);
+const meals = computed<Recipe[]>(() => store.state.searchMeals);
 
 function searchMeals() {
 	store.dispatch("searchMeals", keyword.value ? keyword.value : "All");
 }
 
 onMounted(() => {
-	keyword.value = route.params.name;
+	keyword.value = route.params.name as string;
 	searchMeals();
 });
 </script>
