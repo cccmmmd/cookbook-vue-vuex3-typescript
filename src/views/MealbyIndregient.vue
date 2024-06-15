@@ -16,7 +16,7 @@ import { computed, onMounted } from "vue";
 import store from "../store";
 import { useRoute, useRouter } from "vue-router";
 import Mealitem from "../components/Mealitem.vue";
-import {Meal} from '../types';
+import { Meal } from '../types/meal';
 
 
 const route = useRoute();

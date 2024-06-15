@@ -23,7 +23,7 @@ import { computed, ref, onMounted } from "vue";
 import { useRoute } from "vue-router";
 import store from "../store";
 import Mealitem from "../components/Mealitem.vue";
-import {Recipe} from '../types';
+import { Recipe } from '../types/Recipe';
 
 const route = useRoute();
 const keyword = ref<string>("");

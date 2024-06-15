@@ -1,22 +1,3 @@
-export interface Category {
-  idCategory: number;
-  strCategory: string;
-  strCategoryThumb: string;
-}
-
-export interface Meal {
-  strMeal: string;
-  strMealThumb: string;
-  idMeal: number;
-}
-
-export interface Ingredient {
-  idIngredient: string;
-  strIngredient: string;
-  strDescription: string | null;
-  strType: string | null;
-}
-
 export interface Recipe {
     idMeal: string;
     strMeal: string;

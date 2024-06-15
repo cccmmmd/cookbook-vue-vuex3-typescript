@@ -32,7 +32,7 @@
 <script setup lang="ts">
 import { computed, onMounted } from "vue";
 import store from "../store";
-import {Category} from '../types';
+import { Category } from '../types/Category';
 
 const categories = computed<Category[]>(() => store.state.categories);
 

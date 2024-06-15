@@ -27,10 +27,13 @@
 </template>
 <script setup lang="ts">
 import YoutubeButton from "../components/YoutubeBtn.vue";
+import { PropType } from "vue";
+import { Recipe } from '../types/Recipe';
+
 const { meal } = defineProps({
 	meal: {
 		required: true,
-		type: Object,
+		type: Object as PropType<Recipe>,
 	},
 });
 </script>
