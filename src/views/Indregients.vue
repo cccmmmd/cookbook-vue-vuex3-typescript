@@ -37,7 +37,7 @@
 <script setup lang="ts">
 import { computed, onMounted, ref } from 'vue';
 import store from '../store';
-import type {Ingredient} from '../types';
+import {Ingredient} from '../types';
 
 const keyword = ref('');
 
